@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContohController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 
@@ -32,6 +33,20 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/about', [PageController::class, 'index2']);
 // Route::get('/articles/{id}', [PageController::class, 'index3']);
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'index']);
-Route::get('/articles/{id}', [ArticleController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'index']);
+// Route::get('/articles/{id}', [ArticleController::class, 'index']);
+
+Route::get('/home', [ContohController::class, 'index']);
+
+Route::prefix('product')->group(function (){
+    Route::get('/list', [ContohController::class, 'product']);
+});
+
+Route::get('/news{page}', [ContohController::class, 'news']);
+
+Route::prefix('program')->group(function (){
+    Route::get('/list', [ContohController::class, 'program']);
+});
+
+Route::resource('contact', ContohController::class);
