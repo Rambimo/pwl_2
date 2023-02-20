@@ -4,16 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BerandaController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        
+    public function index(){
+        return ('selamat datang');
+    }
+
+    function index2(){
+        return ('2141720094 - Rambimo Regeng Pangestu');
+    }
+
+    function index3($id){
+        return ('Halaman Artikel dengan ID'. $id);
     }
 
     /**

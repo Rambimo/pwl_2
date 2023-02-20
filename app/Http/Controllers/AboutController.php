@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AboutController extends Controller
 {
     public function index(){
-        return('selamat datang');
+        return ('2141720094 - Rambimo Regeng Pangestu');
     }
 }
