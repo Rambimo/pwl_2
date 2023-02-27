@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return ('selamat datang');
-// });
+Route::get('/', function () {
+    return ('selamat datang');
+});
 // Route::get('/about', function(){
 //     return('Nim : 2141720094 - Nama : Rambimo Regeng Pangestu');
 // });
@@ -37,16 +37,16 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/about', [AboutController::class, 'index']);
 // Route::get('/articles/{id}', [ArticleController::class, 'index']);
 
-Route::get('/home', [ContohController::class, 'index']);
+// Route::get('/home', [ContohController::class, 'index']);
 
-Route::prefix('product')->group(function (){
-    Route::get('/list', [ContohController::class, 'product']);
-});
+// Route::prefix('product')->group(function (){
+//     Route::get('/list', [ContohController::class, 'product']);
+// });
 
-Route::get('/news{page}', [ContohController::class, 'news']);
+// Route::get('/news{page}', [ContohController::class, 'news']);
 
-Route::prefix('program')->group(function (){
-    Route::get('/list', [ContohController::class, 'program']);
-});
+// Route::prefix('program')->group(function (){
+//     Route::get('/list', [ContohController::class, 'program']);
+// });
 
-Route::resource('contact', ContohController::class);
+// Route::resource('contact', ContohController::class);
