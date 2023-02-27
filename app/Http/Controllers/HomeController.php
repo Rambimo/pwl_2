@@ -14,5 +14,7 @@ class HomeController extends Controller
         return view ('layout.home');
     }
 
-    public function 
+    public function product(){
+        return view ('layout.product');
+    }
 }

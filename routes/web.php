@@ -56,3 +56,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/home', [HomeController::class, 'index']);
+
+Route::prefix('product')->group(function (){
+    Route::get('/list', [HomeController::class, 'product']);
+});
