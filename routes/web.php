@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ('selamat datang');
-});
+// Route::get('/', function () {
+//     return ('selamat datang');
+// });
 // Route::get('/about', function(){
 //     return('Nim : 2141720094 - Nama : Rambimo Regeng Pangestu');
 // });
@@ -29,13 +29,16 @@ Route::get('/', function () {
 //     return('Halaman Artikel dengan ID ' . $id);
 // });
 
+
 // Route::get('/', [PageController::class, 'index']);
 // Route::get('/about', [PageController::class, 'index2']);
 // Route::get('/articles/{id}', [PageController::class, 'index3']);
 
+
 // Route::get('/', [HomeController::class, 'index']);
 // Route::get('/about', [AboutController::class, 'index']);
 // Route::get('/articles/{id}', [ArticleController::class, 'index']);
+
 
 // Route::get('/home', [ContohController::class, 'index']);
 
@@ -50,3 +53,6 @@ Route::get('/', function () {
 // });
 
 // Route::resource('contact', ContohController::class);
+
+
+Route::get('/home', [HomeController::class, 'index']);
