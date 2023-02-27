@@ -51,32 +51,32 @@ use Illuminate\Support\Facades\Route;
 // Route::resource('contact', ContohController::class);
 
 
-// Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
-// Route::prefix('home')->group(function (){
-//     Route::get('/product', [HomeController::class, 'product']);
-// });
-
-// Route::prefix('home')->group(function (){
-//     Route::get('/news', [HomeController::class, 'news']);
-// });
-
-// Route::prefix('home')->group(function (){
-//     Route::get('/program', [HomeController::class, 'program']);
-// });
-
-// Route::prefix('home')->group(function (){
-//     Route::get('/aboutus', [HomeController::class, 'aboutus']);
-// });
-
-// Route::prefix('home')->group(function (){
-//     Route::get('/contactus', [HomeController::class, 'contactus']);
-// });
-
-Route::get('/', function () {
-    return view ('layout.Layout.template');
+Route::prefix('home')->group(function (){
+    Route::get('/product', [HomeController::class, 'product']);
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/profile', [ProfileController::class, 'index']);
-Route::get('/pengalaman', [PengalamanKuliahController::class, 'index']);
+Route::prefix('home')->group(function (){
+    Route::get('/news', [HomeController::class, 'news']);
+});
+
+Route::prefix('home')->group(function (){
+    Route::get('/program', [HomeController::class, 'program']);
+});
+
+Route::prefix('home')->group(function (){
+    Route::get('/aboutus', [HomeController::class, 'aboutus']);
+});
+
+Route::prefix('home')->group(function (){
+    Route::get('/contactus', [HomeController::class, 'contactus']);
+});
+
+// Route::get('/', function () {
+//     return view ('layout.Layout.template');
+// });
+
+// Route::get('/dashboard', [DashboardController::class, 'index']);
+// Route::get('/profile', [ProfileController::class, 'index']);
+// Route::get('/pengalaman', [PengalamanKuliahController::class, 'index']);
