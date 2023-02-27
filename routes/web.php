@@ -1,10 +1,6 @@
 <?php
 
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\ContohController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PageController;
+namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
@@ -81,4 +77,6 @@ Route::get('/', function () {
     return view ('layout.Layout.template');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/pengalaman', [PengalamanKuliahController::class, 'index']);
