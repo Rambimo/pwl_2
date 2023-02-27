@@ -60,3 +60,19 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::prefix('product')->group(function (){
     Route::get('/list', [HomeController::class, 'product']);
 });
+
+Route::prefix('news')->group(function (){
+    Route::get('/list', [HomeController::class, 'news']);
+});
+
+Route::prefix('program')->group(function (){
+    Route::get('/list', [HomeController::class, 'program']);
+});
+
+Route::prefix('aboutus')->group(function (){
+    Route::get('/list', [HomeController::class, 'aboutus']);
+});
+
+Route::prefix('contactus')->group(function (){
+    Route::get('/list', [HomeController::class, 'contactus']);
+});

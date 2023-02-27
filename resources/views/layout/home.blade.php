@@ -1,1 +1,2 @@
-Selamat datang di Halaman Home
+Selamat Datang
+Menampilkan halaman awal website
