@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('hobby', function (Blueprint $table) {
+        Schema::create('matakuliah', function (Blueprint $table) {
             $table->id();
-            $table->string('hobby', 30);
-            $table->string('alasan', 250);
+            $table->smallInteger('kode_matkul');
+            $table->string('nm_matkul', 50);
+            $table->string('nm_dosen', 50);
+            $table->double('nilai');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hobby');
+        Schema::dropIfExists('matakuliah');
     }
 };
