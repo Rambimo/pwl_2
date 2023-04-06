@@ -44,7 +44,7 @@
         </li>
         <li class="nav-item">
           <a href="{{url('/pengalaman')}}" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
+            <i class="nav-icon fas fa-th"></i>
             <p>
               Pengalaman Kuliah
             </p>
@@ -63,6 +63,14 @@
             <i class="nav-icon fas fa-th"></i>
             <p>
               Keluarga
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url('/mahasiswa')}}" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Mahasiswa
             </p>
           </a>
         </li>

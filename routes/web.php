@@ -93,6 +93,8 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/hobby', [HoobyController::class, 'index']);
     Route::get('/keluarga', [KeluargaController::class, 'index']);
 
+    Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
+
     // Route::get('/kendaraan', [KendaraanController::class, 'index']);
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
