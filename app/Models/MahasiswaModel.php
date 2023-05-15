@@ -16,6 +16,15 @@ class MahasiswaModel extends Model
         'tempat_lahir',
         'tanggal_lahir',
         'hp',
-        'alamat'
+        'alamat',
+        'prodi_id'
     ];
+
+    public function prodi(){
+        return $this->hasOne(ProdiModel::class, 'prodi_id', 'prodi_id');
+    }
+
+    public function hobby(){
+        return $this->hasOne(HobbyModel::class, 'mahasiswa_id', 'id');
+    }
 }

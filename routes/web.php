@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -92,6 +93,8 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/pengalaman', [PengalamanKuliahController::class, 'index']);
     Route::get('/hobby', [HoobyController::class, 'index']);
     Route::get('/keluarga', [KeluargaController::class, 'index']);
+    Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
+    Route::resource('/article', ArticleController::class);
 
     Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
 
